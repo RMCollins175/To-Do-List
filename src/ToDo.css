@@ -1,6 +1,8 @@
-.ToDo {
-    
+.ToDo-Done {
+    text-decoration: line-through;
 }
 
-.List {
+.ToDo-NotDone {
+    text-decoration: none;
 }
+

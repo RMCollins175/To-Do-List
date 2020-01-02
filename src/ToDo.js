@@ -8,8 +8,8 @@ class ToDo extends React.Component {
 
     return (
       <div className="ToDo">
-        <div className={this.props.done ? "ToDo-done" : "ToDo-normal"} onClick={this.props.strikeThrough}>
-          <li className="List">
+        <div>
+          <li className={this.props.isDone ? "ToDo-Done" : "ToDo-NotDone"} onClick={this.props.toggleToDo}>
             {this.props.item}
             <button onClick={this.props.remove}>X</button>
           </li>
@@ -20,3 +20,6 @@ class ToDo extends React.Component {
 }
 
 export default ToDo;
+
+
+// className={this.props.done ? "ToDo-done" : "ToDo-normal"}

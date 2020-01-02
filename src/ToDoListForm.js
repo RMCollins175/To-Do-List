@@ -15,7 +15,7 @@ class ToDoListForm extends React.Component {
 
   handleSubmit(evt) {
     evt.preventDefault() //prevent page from refreshing
-    const newToDo = {...this.state, id: uuid()}
+    const newToDo = {...this.state, id: uuid(), done: false}
     this.props.addTodo(newToDo)
     this.setState({ toDoItem: "" }) // reset the forms
   }
