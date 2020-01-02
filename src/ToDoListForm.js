@@ -5,16 +5,23 @@ class ToDoListForm extends React.Component {
     super(props);
     this.state = { toDoItem: "" };
     this.handleChange = this.handleChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleChange(evt) {
       this.setState({[evt.target.name]: evt.target.value})
   }
 
+  handleSubmit(evt) {
+    evt.preventDefault() //prevent page from refreshing
+    this.props.addTodo(this.state)
+    this.setState({ toDoItem: "" }) // reset the forms
+  }
+
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <label htmlFor="toDoItem">ToDo</label>
           <input
             name="toDoItem"
