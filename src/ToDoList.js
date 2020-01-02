@@ -9,11 +9,12 @@ class ToDoList extends React.Component {
     super(props);
     this.state = {
       todos: [
-        { toDoItem: "take out the rubbish", id: uuid()},
-        { toDoItem: "clean the dishes", id: uuid() }
+        { toDoItem: "take out the rubbish", id: uuid(), done: false},
+        { toDoItem: "clean the dishes", id: uuid(), done: false}
       ]
     };
     this.addTodo = this.addTodo.bind(this)
+    this.strikeThrough = this.strikeThrough.bind(this)
   }
 
   addTodo(todo) {
@@ -28,6 +29,10 @@ class ToDoList extends React.Component {
     this.setState(st => ({
         todos: st.todos.filter(t => t.id !== id)
     }))
+  }
+
+  strikeThrough() {
+    console.log(this.state.todos[0].done)
 
   }
 
@@ -37,6 +42,8 @@ class ToDoList extends React.Component {
     item={m.toDoItem}
     id={m.id}
     remove={() => this.remove(m.id)}
+    strikeThrough={this.strikeThrough}
+
     />);
 
     return (
