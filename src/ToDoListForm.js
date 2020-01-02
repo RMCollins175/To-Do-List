@@ -1,4 +1,5 @@
 import React from "react";
+import uuid from 'react-uuid'
 
 class ToDoListForm extends React.Component {
   constructor(props) {
@@ -14,7 +15,8 @@ class ToDoListForm extends React.Component {
 
   handleSubmit(evt) {
     evt.preventDefault() //prevent page from refreshing
-    this.props.addTodo(this.state)
+    const newToDo = {...this.state, id: uuid()}
+    this.props.addTodo(newToDo)
     this.setState({ toDoItem: "" }) // reset the forms
   }
 
