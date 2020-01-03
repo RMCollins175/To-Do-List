@@ -1,5 +1,6 @@
 import React from "react";
 import uuid from 'react-uuid'
+import './ToDoListForm.css'
 
 class ToDoListForm extends React.Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class ToDoListForm extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="ToDoListForm">
         <form onSubmit={this.handleSubmit}>
           <label htmlFor="toDoItem">ToDo</label>
           <input
@@ -33,7 +34,7 @@ class ToDoListForm extends React.Component {
             onChange={this.handleChange}
             value={this.state.toDoItem}
           />
-          <button>Add</button>
+          <button className="fas fa-plus"></button>
         </form>
       </div>
     );

@@ -1,6 +1,28 @@
-.ToDoList-List {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
+.ToDoList {
+    margin: 4rem auto;
+    padding: 2rem 3rem 3rem;
+    max-width: 500px;
+    background-color: coral;
+    color: white;
+    box-shadow: -15px -15px 0px 0px rgba(100, 100, 100, 0.1);
+}
+
+.ToDoList ol {
+    margin-top: 2.6rem;
+    list-style: none;
+}
+
+.ToDoList h1 {
+    font-weight: normal;
+    font-size: 2.5rem;
+    letter-spacing: 0.1;
+    border-bottom: 1px solid lightyellow;
+}
+
+.ToDoList h1 span {
+    display: block;
+    font-weight: lighter;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1.0rem
 }

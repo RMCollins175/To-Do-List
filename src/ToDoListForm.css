@@ -1,0 +1,17 @@
+.ToDoListForm label {
+    margin: 0.3rem;
+}
+
+.ToDoListForm input {
+    font-size: 1.2rem;
+}
+
+.ToDoListForm button {
+    font-size: 1.2rem;
+    margin: 0.3rem;
+    border-radius: 5px;
+    padding: 2px;
+    background: none;
+    border: none;
+}
+

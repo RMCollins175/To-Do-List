@@ -1,7 +1,49 @@
-.ToDo-Completed{
+.ToDo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5p;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.ToDo.Completed {
     text-decoration: line-through;
     color: lightgray;
+    opacity: 0.6;
 }
+
+
+.ToDo-Incompleted {
+
+}
+
+
+.ToDo .Buttons button {
+    border: none;
+    font-size: 1.3rem;
+    background: none;
+    cursor: pointer;
+    margin: 0.4rem;
+    padding: 0.3rem
+}
+
+.Edit-Form label {
+    font-size: 1.3rem;
+    margin: 0.2rem
+}
+
+
+.Edit-Form input {
+    font-size: 1.3rem;
+    flex-grow: 1;
+    border: none;
+    padding: 0.3rem 0.1rem;
+    font-size: initial;
+}
+
+
+
+
 
 
 
