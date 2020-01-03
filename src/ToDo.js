@@ -9,7 +9,7 @@ class ToDo extends React.Component {
     return (
       <div className="ToDo">
         <div>
-          <li className={this.props.isDone ? "ToDo-Completed" : ""} onClick={this.props.toggleToDo}>
+          <li className={this.props.isDone ? "ToDo-Completed" : ""} onMouseDown={this.props.toggleToDo}>
             {this.props.item}
             <button onClick={this.props.remove}>X</button>
           </li>
