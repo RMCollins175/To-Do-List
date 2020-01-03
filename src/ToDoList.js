@@ -26,7 +26,7 @@ class ToDoList extends React.Component {
   remove(id) {
     console.log('removing')
     this.setState(st => ({
-        todos: st.todos.filter(t => t.id !== id)
+        todos: st.todos.filter(todo => todo.id !== id)
     }))
   }
 
@@ -42,13 +42,14 @@ class ToDoList extends React.Component {
   }
 
   render() {
-    const todos = this.state.todos.map(m => 
+    const todos = this.state.todos.map(todo => 
     <ToDo 
-    item={m.toDoItem}
-    id={m.id}
-    remove={() => this.remove(m.id)}
-    toggleToDo={() => this.toggleCompletion(m.id)}
-    isDone={m.done}
+    item={todo.toDoItem}
+    key={todo.id}
+    id={todo.id}
+    remove={() => this.remove(todo.id)}
+    toggleToDo={() => this.toggleCompletion(todo.id)}
+    isDone={todo.done}
 
     />);
 
