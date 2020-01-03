@@ -1,8 +1,6 @@
-.ToDo-Done {
+.ToDo-Completed{
     text-decoration: line-through;
+    color: lightgray;
 }
 
-.ToDo-NotDone {
-    text-decoration: none;
-}
 
